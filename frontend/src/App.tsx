@@ -1,14 +1,7 @@
 import { useEffect } from 'react';
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
-import HeroSection from './components/sections/HeroSection';
-import AboutSection from './components/sections/AboutSection';
-import ProjectsSection from './components/sections/ProjectsSection';
-import ExperienceSection from './components/sections/ExperienceSection';
-import ContactSection from './components/sections/ContactSection';
-
-import './index.css';
-import EducationSection from './components/sections/EducationSection';
+import { Route, Routes } from 'react-router';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
 
 // Add custom animations CSS
 const animationStyles = `
@@ -72,18 +65,10 @@ function App() {
   }, []);
   
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-      <Header />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <EducationSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<LoginPage />} />
+    </Routes>
   );
 }
 
