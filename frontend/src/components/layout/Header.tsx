@@ -40,7 +40,7 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <a 
-          href="#home" 
+          href="/" 
           className="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent"
         >
           Aman.co
