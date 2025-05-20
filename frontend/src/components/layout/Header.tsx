@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { NavItem } from '../../types';
-import { cn } from '../../utils/cn';
-import ThemeToggle from '../ThemeToggle';
+import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { NavItem } from "../../types";
+import { cn } from "../../utils/cn";
+import ThemeToggle from "../ThemeToggle";
 
 const navItems: NavItem[] = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Education', href: '#education' },
-  { label: 'Contact', href: '#contact' },
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Education", href: "#education" },
+  { label: "Contact", href: "#contact" },
+  // { label: "Admin Login", href: "/login" },
 ];
 
 const Header: React.FC = () => {
@@ -25,22 +26,22 @@ const Header: React.FC = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
 
   return (
-    <header 
+    <header
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out",
-        scrolled 
-          ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md py-3 shadow-md" 
+        scrolled
+          ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md py-3 shadow-md"
           : "bg-transparent py-5"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <a 
-          href="/" 
+        <a
+          href="/"
           className="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent"
         >
           Aman.co
@@ -59,7 +60,6 @@ const Header: React.FC = () => {
           ))}
           <ThemeToggle />
         </nav>
-
         {/* Mobile Navigation Toggle */}
         <div className="flex items-center space-x-4 md:hidden">
           <ThemeToggle />
@@ -80,7 +80,14 @@ const Header: React.FC = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <div className="flex flex-col h-full pt-20 p-8 space-y-8">
+        <div className="flex flex-col justify-center pt-8 p-8 space-y-8">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="justify-items-end m-[-1rem] text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400"
+            aria-label="Toggle menu"
+          >
+            <X size={24} />
+          </button>
           {navItems.map((item) => (
             <a
               key={item.label}
