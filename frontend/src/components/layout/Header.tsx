@@ -98,6 +98,13 @@ const Header: React.FC = () => {
               {item.label}
             </a>
           ))}
+          <a
+            href="/login"
+            className="text-xl text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium"
+            onClick={() => setIsOpen(false)}
+          >
+            Admin Login
+          </a>
         </div>
       </div>
     </header>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
-import { email, github, linkedin, twitter } from '../../data/socials';
+import React from "react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { email, github, linkedin, twitter } from "../../data/socials";
 
 const Footer: React.FC = () => {
   return (
@@ -12,11 +12,11 @@ const Footer: React.FC = () => {
               Aman.co
             </h3>
             <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-md">
-              Bringing creative ideas to life with code.
-              Let's build something amazing together.
+              Bringing creative ideas to life with code. Let's build something
+              amazing together.
             </p>
           </div>
-          
+
           <div className="flex space-x-6">
             <a
               href={github}
@@ -54,10 +54,19 @@ const Footer: React.FC = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
           <p className="text-gray-600 dark:text-gray-400 text-sm">
-            © {new Date().getFullYear()} Kr.Aman. All rights reserved.
+            © {new Date().getFullYear()} Kr.Aman. All rights reserved.{" "}
+            <a
+              href="/login"
+              className="underline"
+              aria-label="Login"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Admin Login
+            </a>
           </p>
         </div>
       </div>
