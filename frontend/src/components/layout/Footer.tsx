@@ -62,8 +62,8 @@ const Footer: React.FC = () => {
               href="/login"
               className="underline"
               aria-label="Login"
-              target="_blank"
-              rel="noopener noreferrer"
+              // target="_blank"
+              // rel="noopener noreferrer"
             >
               Admin Login
             </a>
