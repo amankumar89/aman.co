@@ -14,7 +14,7 @@ const AboutSection: React.FC = () => {
     "Programming Languages",
     "Frontend",
     "Backend",
-    "Database",
+    // "Database",
     "Tools",
   ] as const;
 
