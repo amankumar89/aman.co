@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
-import { Route, Routes } from 'react-router';
-import HomePage from './pages/HomePage';
-import LoginPage from './pages/LoginPage';
+import { useEffect } from "react";
+import { Route, Routes } from "react-router";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
 
 // Add custom animations CSS
 const animationStyles = `
@@ -44,26 +44,26 @@ const animationStyles = `
 function App() {
   useEffect(() => {
     // Inject animation styles
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = animationStyles;
     document.head.appendChild(style);
-    
+
     // Set page title
-    document.title = 'Aman.co - Portfolio of Full Stack Developer';
-    
+    document.title = "Aman.co - Portfolio of MERN Stack Developer";
+
     // Check for saved theme preference and apply it immediately
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       document.documentElement.classList.add(savedTheme);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.classList.add('dark');
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.classList.add("dark");
     }
-    
+
     return () => {
       document.head.removeChild(style);
     };
   }, []);
-  
+
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
