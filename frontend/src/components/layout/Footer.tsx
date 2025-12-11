@@ -1,6 +1,7 @@
 import React from "react";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { email, github, linkedin, twitter } from "../../data/socials";
+import { Link } from "react-router";
 
 const Footer: React.FC = () => {
   return (
@@ -58,7 +59,7 @@ const Footer: React.FC = () => {
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
           <p className="text-gray-600 dark:text-gray-400 text-sm">
             © {new Date().getFullYear()} Kr.Aman. All rights reserved.{" "}
-            <a
+            {/* <a
               href="/login"
               className="underline"
               aria-label="Login"
@@ -66,7 +67,8 @@ const Footer: React.FC = () => {
               // rel="noopener noreferrer"
             >
               Admin Login
-            </a>
+            </a> */}
+            <Link to="/login" className="underline">Admin Login</Link>
           </p>
         </div>
       </div>
