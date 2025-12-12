@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 // Define types for form state and errors
 interface FormData {
@@ -13,6 +14,7 @@ type FormErrors = {
 };
 
 const LoginPage: React.FC = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<FormData>({
     email: '',
     password: '',
@@ -45,12 +47,14 @@ const LoginPage: React.FC = () => {
     setIsSubmitting(true);
 
     // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setErrors({
-        general: 'Invalid credentials. Please try again.',
-      });
-    }, 1500);
+    // setTimeout(() => {
+    //   setIsSubmitting(false);
+    //   setErrors({
+    //     general: 'Invalid credentials. Please try again.',
+    //   });
+    // }, 1500);
+    localStorage.setItem('isLoggedIn', "true");
+    navigate('/dashboard');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

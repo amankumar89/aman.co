@@ -19,11 +19,11 @@ export interface SkillProps {
 }
 
 export interface Skill {
-  'Programming Languages': SkillProps[],
-  'Frontend': SkillProps[],
-  'Backend': SkillProps[],
-  'Database': SkillProps[],
-  'Tools': SkillProps[],
+  "Programming Languages": SkillProps[];
+  Frontend: SkillProps[];
+  Backend: SkillProps[];
+  Database: SkillProps[];
+  Tools: SkillProps[];
 }
 
 export interface Experience {

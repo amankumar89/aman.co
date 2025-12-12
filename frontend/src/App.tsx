@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import ProtectedRoute from "./components/ProtectedRoute";
+import DashboardPage from "./pages/DashboardPage";
 
 // Add custom animations CSS
 const animationStyles = `
@@ -68,6 +70,16 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
+
+      {/* Protected Admin Routes */}
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <DashboardPage />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 }
