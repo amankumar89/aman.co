@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
           >
             {/* <span className="block text-gray-900 dark:text-gray-100">Full Stack Software Engineer</span> */}
             <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent inline-block mt-2">
-              MERN Stack Developer
+              Full Stack Developer
             </span>
           </h1>
 
@@ -72,11 +72,14 @@ const HeroSection: React.FC = () => {
             className="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-2xl opacity-0 translate-y-8 animate-fade-in-up"
             style={{ animationDelay: "400ms" }}
           >
-            Passionate about building scalable, high-performance web
-            applications using modern technologies. Expertise in the MERN stack,
-            RESTful API design, and end-to-end development of production-ready
-            solutions. Committed to clean code, agile practices, and delivering
-            impactful user experiences.
+            Experienced Full Stack Web Developer with strong expertise in
+            frontend engineering and hands-on backend development using the MERN
+            stack. I specialize in building scalable, high-performance web
+            applications using React, Next.js, TypeScript, Tailwind CSS, and
+            Redux, backed by Node.js, Express, MongoDB, and RESTful APIs. I
+            focus on clean architecture, reusable components, performance
+            optimization, and end-to-end feature development—delivering seamless
+            user experiences from database to UI.
           </p>
 
           <div

@@ -51,7 +51,7 @@ function App() {
     document.head.appendChild(style);
 
     // Set page title
-    document.title = "Aman.co - Portfolio of MERN Stack Developer";
+    document.title = "Aman.co - Portfolio of Full Stack Developer";
 
     // Check for saved theme preference and apply it immediately
     const savedTheme = localStorage.getItem("theme");

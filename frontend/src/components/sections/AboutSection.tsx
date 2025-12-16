@@ -14,7 +14,7 @@ const AboutSection: React.FC = () => {
     "Programming Languages",
     "Frontend",
     "Backend",
-    // "Database",
+    "Database",
     "Tools",
   ] as const;
 
@@ -47,18 +47,19 @@ const AboutSection: React.FC = () => {
                 Who I Am
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                I'm a passionate Software Engineer with over 2 years of
-                experience, including 9 months of internship and 1.3 years as a
-                full-time developer. My expertise lies in frontend development,
-                where I’ve built and maintained scalable web applications using
-                React, Next.js, TypeScript, JavaScript, Tailwind CSS, and the
-                Ant Design (antd) library. I have hands-on experience
-                integrating both REST APIs and GraphQL into modern web
-                interfaces. While my professional background is primarily
-                frontend-focused, I also possess foundational knowledge of
-                backend technologies such as Node.js, Express, MongoDB, SQL,
-                EJS, JWT, and API development. I'm continuously expanding my
-                backend skills to become a well-rounded full-stack developer.
+                I’m a passionate Full Stack Software Engineer with 2+ years of
+                experience, building production-grade web applications. My core
+                strength lies in frontend development, where I’ve designed and
+                maintained scalable interfaces using React, Next.js, TypeScript,
+                JavaScript, Tailwind CSS, and Ant Design. I have extensive
+                experience integrating REST APIs and working with modern state
+                management patterns. On the backend, I work with Node.js,
+                Express, MongoDB, SQL, JWT authentication, and API development
+                to build secure and reliable services. As a frontend-heavy MERN
+                developer, I enjoy owning features end-to-end—from UI and state
+                management to APIs and database interactions—and continuously
+                sharpening my backend expertise to deliver complete full-stack
+                solutions.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex items-center">
