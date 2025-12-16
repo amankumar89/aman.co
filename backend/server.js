@@ -43,7 +43,7 @@ app.use("/", (req, res) => {
     .json({ success: true, message: "Server is running..." });
 });
 
-app.use((req, res) => {
+app.use("*", (req, res) => {
   return res.status(404).json({
     success: false,
     message: "Route not found",
