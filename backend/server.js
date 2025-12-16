@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
+import { connectDB } from "./config/db.js";
 
 // routes import
 import heroRoutes from "./routes/hero.routes.js";
@@ -10,6 +11,7 @@ import skillsRoutes from "./routes/skills.routes.js";
 import experienceRoutes from "./routes/experience.routes.js";
 import projectsRoutes from "./routes/projects.routes.js";
 import educationRoutes from "./routes/education.routes.js";
+import authRoutes from "./routes/auth.routes.js";
 
 dotenv.config();
 
@@ -25,7 +27,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend", "dist")));
 
 // routes
-app.use("/api/auth");
+app.use("/api/auth", authRoutes);
 app.use("/api/hero", heroRoutes);
 app.use("/api/about", aboutRoutes);
 app.use("/api/skills", skillsRoutes);
@@ -43,4 +45,5 @@ app.use("*", (req, res) => {
 app.listen(PORT, (error) => {
   if (error) return console.log("error running server", error);
   console.log(`Server running at: http://localhost:${PORT}`);
+  connectDB();
 });
