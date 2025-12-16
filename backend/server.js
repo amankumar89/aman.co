@@ -19,12 +19,12 @@ const PORT = process.env.PORT || 5001;
 const app = express();
 const __dirname = path.resolve();
 
-if (!process.env.NODE_ENV === "production") {
-  app.use(cors({ origin: "*" }));
-}
+// if (!process.env.NODE_ENV === "production") {
+//   app.use(cors({ origin: "*" }));
+// }
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../frontend", "dist")));
+// app.use(express.static(path.join(__dirname, "../frontend", "dist")));
 
 // routes
 app.use("/api/auth", authRoutes);
@@ -35,12 +35,12 @@ app.use("/api/experience", experienceRoutes);
 app.use("/api/projects", projectsRoutes);
 app.use("/api/education", educationRoutes);
 
-app.use("*", (req, res) => {
-  // send frontend dist folder index.html using path module
-  return res.sendFile(
-    path.join(__dirname, "../frontend", "dist", "index.html")
-  );
-});
+// app.use("*", (req, res) => {
+//   // send frontend dist folder index.html using path module
+//   return res.sendFile(
+//     path.join(__dirname, "../frontend", "dist", "index.html")
+//   );
+// });
 
 app.listen(PORT, (error) => {
   if (error) return console.log("error running server", error);
