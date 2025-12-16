@@ -26,6 +26,8 @@ const __dirname = path.resolve();
 app.use(express.json());
 // app.use(express.static(path.join(__dirname, "../frontend", "dist")));
 
+connectDB();
+
 // routes
 app.use("/api/auth", authRoutes);
 app.use("/api/hero", heroRoutes);
@@ -41,9 +43,12 @@ app.use("/api/education", educationRoutes);
 //     path.join(__dirname, "../frontend", "dist", "index.html")
 //   );
 // });
+export default app;
 
-app.listen(PORT, (error) => {
-  if (error) return console.log("error running server", error);
-  console.log(`Server running at: http://localhost:${PORT}`);
-  connectDB();
-});
+// local setup
+if (process.env.NODE_ENV !== "production") {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () =>
+    console.log(`Server running at: http://localhost:${PORT}`)
+  );
+}
