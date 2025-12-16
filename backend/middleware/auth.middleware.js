@@ -1,5 +1,5 @@
 // JWT Auth Middleware
-export const authenticateJWT = (req, res, next) => {
+export const protect = (req, res, next) => {
   const authHeader = req.headers.authorization;
   if (authHeader) {
     const token = authHeader.split(' ')[1];
@@ -11,6 +11,6 @@ export const authenticateJWT = (req, res, next) => {
       next();
     });
   } else {
-    res.sendStatus(401);
+    res.sendStatus(401).json({ message: 'Not Authorized!' });
   }
 };

@@ -1,10 +1,10 @@
 import express from "express";
 import { getExperience, updateExperience } from "../controllers/experience.controller.js";
-import { authenticateJWT } from "../middleware/auth.middleware.js";
+import { protect } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
 router.get("/", getExperience);
-router.put("/", authenticateJWT, updateExperience);
+router.put("/", protect, updateExperience);
 
 export default router;
