@@ -37,8 +37,17 @@ app.use("/api/experience", experienceRoutes);
 app.use("/api/projects", projectsRoutes);
 app.use("/api/education", educationRoutes);
 
-app.get("/", (req, res) => {
-  res.status(200).json({ success: true, message: "Server is running..." });
+app.use("/", (req, res) => {
+  return res
+    .status(200)
+    .json({ success: true, message: "Server is running..." });
+});
+
+app.use((req, res) => {
+  return res.status(404).json({
+    success: false,
+    message: "Route not found",
+  });
 });
 
 // app.use("*", (req, res) => {
