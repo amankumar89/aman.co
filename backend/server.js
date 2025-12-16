@@ -37,6 +37,10 @@ app.use("/api/experience", experienceRoutes);
 app.use("/api/projects", projectsRoutes);
 app.use("/api/education", educationRoutes);
 
+app.get("/", (req, res) => {
+  res.status(200).json({ success: true, message: "Server is running..." });
+});
+
 // app.use("*", (req, res) => {
 //   // send frontend dist folder index.html using path module
 //   return res.sendFile(
