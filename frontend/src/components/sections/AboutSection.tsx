@@ -131,7 +131,7 @@ const AboutSection: React.FC = () => {
                     <h4 className="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4">
                       {category}
                     </h4>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <div className="grid sm:grid-cols-2 2xl:grid-cols-3 gap-3">
                       {skills?.[category].map((skill, index) => (
                         <div
                           key={skill.name}
@@ -141,9 +141,8 @@ const AboutSection: React.FC = () => {
                             "transform hover:-translate-y-1 hover:shadow-lg"
                           )}
                           style={{
-                            animationDelay: `${
-                              (categoryIndex * 4 + index) * 100
-                            }ms`,
+                            animationDelay: `${(categoryIndex * 4 + index) * 100
+                              }ms`,
                             animation: isVisible
                               ? "fadeIn 0.5s ease-out forwards"
                               : "none",
